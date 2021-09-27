@@ -1,0 +1,375 @@
+$lime-green: hsl(163, 72%, 41%);
+$bright-red: hsl(356, 69%, 56%);
+// LIGHT MODE
+$white-BG: hsl(0, 0%, 100%);
+$very-pale-blue-top-BG-Pattern: hsl(225, 100%, 98%);
+$light-grayish-blue-card-BG: hsl(227, 47%, 96%);
+$dark-grayish-blue-Text: hsl(228, 12%, 44%);
+$very-dark-blue-Text: hsl(230, 17%, 14%);
+
+// DARK MODE
+$very-dark-blue-BG: hsl(230, 17%, 14%);
+$very-dark-blue-top-BG-Pattern: hsl(232, 19%, 15%);
+$dark-desaturated-Blue-Card-BG: hsl(228, 28%, 20%);
+$desaturated-blue-Text: hsl(228, 34%, 66%);
+$white-Text: hsl(0, 0%, 100%);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+main {
+  background-color: white;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h3 {
+    font-size: 24px;
+    font-weight: 700;
+  }
+  p {
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  // MOBILE VIEW
+  .container {
+    transition: 325ms ease-in;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 35rem;
+    // DASHBOARD
+    .dashboard {
+      background-color: $very-pale-blue-top-BG-Pattern;
+      position: absolute;
+      top: 0;
+      z-index: 1;
+      width: 100%;
+      height: 15rem;
+      display: flex;
+      flex-direction: column;
+      padding: 2rem 1rem 0 1rem;
+      border-radius: 0 0 20px 20px;
+
+      h3 {
+        color: $very-dark-blue-Text;
+      }
+      p {
+        color: $dark-grayish-blue-Text;
+      }
+      .divider {
+        height: 1px;
+        width: 100%;
+        border-top: 1px solid rgb(173, 173, 173);
+        margin: 1rem 0 1rem;
+      }
+      .mode {
+        display: flex;
+        justify-content: space-between;
+
+        button {
+          position: relative;
+          width: 3rem;
+          height: 1.5rem;
+          background-color: hsl(230, 22%, 74%);
+          border: none;
+          border-radius: 50px;
+          cursor: pointer;
+          .circle {
+            transition: 300ms ease-in-out;
+            position: absolute;
+            top: 0.25rem;
+            left: 1.75rem;
+            width: 1rem;
+            height: 1rem;
+            border: 1px solid white;
+            border-radius: 50px;
+            right: 0;
+            background-color: white;
+          }
+        }
+        .active {
+          background: linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+          transition: 300ms ease-in-out;
+          .circle {
+            transition: 300ms ease-in-out;
+            position: absolute;
+            top: 0.25rem;
+            left: 0.25rem;
+            width: 1rem;
+            height: 1rem;
+            border: 1px solid white;
+            border-radius: 50px;
+            right: 0;
+            background-color: white;
+            animation: linear 1s ease-in;
+          }
+        }
+      }
+    }
+    // SOCIAL
+    .social {
+      z-index: 2;
+
+      width: 90%;
+      margin-top: 12rem;
+
+      .social-card {
+        margin-bottom: 1rem;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $light-grayish-blue-card-BG;
+        h1 {
+          font-size: 56px;
+          line-height: 48px;
+          letter-spacing: -2px;
+        }
+        p {
+          font-size: 12px;
+          font-weight: 400;
+          letter-spacing: 5px;
+          text-transform: uppercase;
+          margin: 0.5rem 0 0.5rem;
+        }
+        .username {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          margin: 2rem 0 2rem;
+          width: 30%;
+          img {
+          }
+          span {
+            color: $dark-grayish-blue-Text;
+            font-size: 12px;
+            font-weight: 700;
+          }
+        }
+        .stats-today {
+          margin: 1rem 0 2rem;
+          font-size: 12px;
+          font-weight: 700;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img {
+            padding-right: 5px;
+          }
+          .up-green {
+            color: $lime-green;
+          }
+          .down-red {
+            color: $bright-red;
+          }
+        }
+      }
+      #facebook {
+        border-top: 4px solid hsl(208, 92%, 53%);
+      }
+      #twitter {
+        border-top: 4px solid hsl(203, 89%, 53%);
+      }
+      #instagram {
+        overflow: hidden;
+        .border-div {
+          width: 100%;
+          height: 4px;
+          background-image: linear-gradient(
+            90deg,
+            hsl(329, 70%, 58%),
+            hsl(37, 97%, 70%)
+          );
+        }
+      }
+      #youtube {
+        border-top: 4px solid hsl(348, 97%, 39%);
+      }
+    }
+    //OVERVIEW
+    .overview-today {
+      width: 90%;
+      margin: 3rem;
+
+      h3 {
+        color: $dark-grayish-blue-Text;
+        margin: 0 0 2rem 0;
+      }
+      h4 {
+        color: $dark-grayish-blue-Text;
+        font-size: 14px;
+        font-weight: 700;
+      }
+      p {
+        font-size: 32px;
+        font-weight: 700;
+      }
+      .over-view-card {
+        height: 8rem;
+        border-radius: 10px;
+        padding: 1rem;
+        background-color: $light-grayish-blue-card-BG;
+        margin: 0 0 1rem;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+        justify-content: space-between;
+        // align-items: center;
+        h4 {
+          grid-column: 1;
+          grid-row: 1;
+          display: flex;
+          justify-content: flex-start;
+        }
+        p {
+          grid-column: 1;
+          grid-row: 2;
+          display: flex;
+          justify-content: flex-start;
+        }
+        .social-image {
+          grid-column: 2;
+          grid-row: 1;
+          width: 100%;
+          height: 2rem;
+          display: flex;
+          justify-content: flex-end;
+          img {
+            width: 20px;
+            height: 20px;
+          }
+        }
+        span {
+          font-size: 12px;
+          font-weight: 700;
+          grid-column: 2;
+          grid-row: 2;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          img {
+            padding-right: 5px;
+            align-items: center;
+          }
+        }
+        .span-green {
+          color: $lime-green;
+        }
+        .span-red {
+          color: $bright-red;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 720px) {
+  main {
+    .container {
+      position: relative;
+      width: 100%;
+
+      .dashboard {
+        padding-left: 5rem;
+        padding-right: 5rem;
+
+        .divider {
+          display: none;
+        }
+      }
+      .social {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+
+        .social-card {
+          width: 22%;
+          .username {
+            width: 50%;
+            justify-content: space-evenly;
+          }
+        }
+      }
+      .overview-today {
+        width: 90%;
+
+        .overview-wrapper {
+          display: grid;
+          grid-template-columns: auto auto auto auto;
+          grid-template-rows: auto auto auto;
+          grid-row-gap: 1rem;
+          grid-column-gap: 1rem;
+        }
+      }
+    }
+  }
+}
+
+// DARKMODE
+
+.toggleDarkMode {
+  .container {
+    background-color: $very-dark-blue-BG;
+    transition: 325ms ease-in-out;
+    .dashboard {
+      background-color: $very-dark-blue-top-BG-Pattern;
+      transition: 325ms ease-in-out;
+      .info {
+        h3 {
+          color: white;
+        }
+        p {
+          color: $desaturated-blue-Text;
+        }
+      }
+      .mode {
+        p {
+          color: $desaturated-blue-Text;
+        }
+        button {
+          .circle {
+            background-color: $very-dark-blue-top-BG-Pattern;
+            transition: 325ms ease-in-out;
+          }
+        }
+      }
+    }
+    .social {
+      .social-card {
+        background-color: $dark-desaturated-Blue-Card-BG;
+        h1 {
+          color: white;
+        }
+        p {
+          color: $desaturated-blue-Text;
+        }
+        span {
+          color: $desaturated-blue-Text;
+        }
+      }
+    }
+    .overview-today > .overview-wrapper {
+      .over-view-card {
+        background-color: $dark-desaturated-Blue-Card-BG;
+        h4 {
+          color: $desaturated-blue-Text;
+        }
+        p {
+          color: white;
+        }
+      }
+    }
+  }
+}

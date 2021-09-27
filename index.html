@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <main>
+
+    <div class="container">
+                                      <!-- DASHBOARD -->
+      <div class="dashboard">
+        <div class="info">
+          <h3>Social Media Dashboard</h3>
+          <p>Total Followers: 23,004</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="mode">
+          <p>Dark Mode</p>
+          <button id="mode-switch" onclick="this.classList.toggle('active')"><div class="circle"></div></button>
+        </div>
+      </div>
+                                      <!-- SOCIAL -->
+      <div class="social">
+        <div class="social-card" id="facebook">
+          <div class="username"><img src="images/icon-facebook.svg" alt=""><span>@nathanf</span></div>
+          <h1>1987</h1>
+          <p>Followers</p>
+          <div class="stats-today"><img src="images/icon-up.svg" alt=""> <span class="up-green">12 Today</span></div>
+        </div>
+  
+        <div class="social-card" id="twitter">
+          <div class="username"><img src="images/icon-twitter.svg" alt=""><span>@nathanf</span></div>
+          <h1>1044</h1>
+          <p>Followers</p>
+          <div class="stats-today"><img src="images/icon-up.svg" alt=""><span class="up-green">99 Today</span></div>
+        </div>
+  
+        <div class="social-card" id="instagram">
+          <div class="border-div"></div>
+          <div class="username"><img src="images/icon-instagram.svg" alt=""><span>@realnathanf</span></div>
+          <h1>11k</h1>
+          <p>Followers</p>
+          <div class="stats-today"><img src="images/icon-up.svg" alt=""><span class="up-green">1099 Today</span></div>
+        </div>
+        
+        <div class="social-card" id="youtube">
+          <div class="username"><img src="images/icon-youtube.svg" alt=""><span>Nathan F.</span></div>
+          <h1>8239</h1>
+          <p>Subscribers</p>
+          <div class="stats-today"><img src="images/icon-down.svg" alt=""><span class="down-red">144 Today</span></div>
+        </div>
+      </div>
+ 
+                                      <!-- OVERVIEW -->
+      <div class="overview-today">
+        
+        <h3>Overview - Today</h3>
+        <div class="overview-wrapper">
+          <div class="over-view-card">
+            <h4>Page Views</h4>
+            <div class="social-image"><img src="images/icon-facebook.svg" alt=""></div>
+            <p>87</p>
+            <span class="span-green"><img src="images/icon-up.svg" alt="">3%</span> 
+          </div>
+          
+          <div class="over-view-card">
+            <h4>Likes</h4>
+            <div class="social-image"><img src="images/icon-facebook.svg" alt=""></div>
+            <p>52</p>
+            <span class="span-red"><img src="images/icon-down.svg" alt="">2%</span>
+          </div>
+  
+          <div class="over-view-card">
+            <h4>Likes</h4>
+            <div class="social-image"><img src="images/icon-instagram.svg" alt=""></div>
+            <p>5462</p>
+            <span class="span-green"><img src="images/icon-up.svg" alt="">2257%</span>          
+          </div>
+          
+          <div class="over-view-card">
+            <h4>Profile Views</h4>
+            <div class="social-image"><img src="images/icon-instagram.svg" alt=""></div>
+            <p>52k</p>
+            <span class="span-green"><img src="images/icon-up.svg" alt="">1375%</span>  
+          </div>
+          
+          <div class="over-view-card">
+            <h4>Retweets</h4>
+            <div class="social-image"><img src="images/icon-twitter.svg" alt=""></div>
+            <p>117</p>
+            <span class="span-green"><img src="images/icon-up.svg" alt="">303%</span>          
+          </div>
+  
+          <div class="over-view-card">
+            <h4>Likes</h4>
+            <div class="social-image"><img src="images/icon-twitter.svg" alt=""></div>
+            <p>507</p>
+            <span class="span-green"><img src="images/icon-up.svg" alt="">553%</span> 
+          </div>
+  
+          <div class="over-view-card">
+            <h4>Likes</h4>
+            <div class="social-image"><img src="images/icon-youtube.svg" alt=""></div>
+            <p>107</p>
+            <span class="span-red"><img src="images/icon-down.svg" alt="">19%</span>
+          </div>
+  
+          <div class="over-view-card">
+            <h4>Total Views</h4>
+            <div class="social-image"><img src="images/icon-youtube.svg" alt=""></div>
+            <p>1407</p>
+            <span class="span-red"><img src="images/icon-down.svg" alt="">12%</span>
+          </div>
+        </div>
+        
+
+      </div>
+    </div>
+
+  </main>
+
+
+
+  
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Aryan Mehta</a>.
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

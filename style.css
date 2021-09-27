@@ -1,0 +1,472 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+main {
+  background-color: white;
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main h3 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+main p {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+main .container {
+  -webkit-transition: 325ms ease-in;
+  transition: 325ms ease-in;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 35rem;
+}
+
+main .container .dashboard {
+  background-color: #f5f7ff;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 15rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem 1rem 0 1rem;
+  border-radius: 0 0 20px 20px;
+}
+
+main .container .dashboard h3 {
+  color: #1e202a;
+}
+
+main .container .dashboard p {
+  color: #63687e;
+}
+
+main .container .dashboard .divider {
+  height: 1px;
+  width: 100%;
+  border-top: 1px solid #adadad;
+  margin: 1rem 0 1rem;
+}
+
+main .container .dashboard .mode {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .container .dashboard .mode button {
+  position: relative;
+  width: 3rem;
+  height: 1.5rem;
+  background-color: #aeb3cb;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+main .container .dashboard .mode button .circle {
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+  position: absolute;
+  top: 0.25rem;
+  left: 1.75rem;
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid white;
+  border-radius: 50px;
+  right: 0;
+  background-color: white;
+}
+
+main .container .dashboard .mode .active {
+  background: -webkit-gradient(linear, left top, left bottom, from(#378fe6), to(#3eda82));
+  background: linear-gradient(#378fe6, #3eda82);
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+}
+
+main .container .dashboard .mode .active .circle {
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+  position: absolute;
+  top: 0.25rem;
+  left: 0.25rem;
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid white;
+  border-radius: 50px;
+  right: 0;
+  background-color: white;
+  -webkit-animation: linear 1s ease-in;
+          animation: linear 1s ease-in;
+}
+
+main .container .social {
+  z-index: 2;
+  width: 90%;
+  margin-top: 12rem;
+}
+
+main .container .social .social-card {
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f0f2fa;
+}
+
+main .container .social .social-card h1 {
+  font-size: 56px;
+  line-height: 48px;
+  letter-spacing: -2px;
+}
+
+main .container .social .social-card p {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin: 0.5rem 0 0.5rem;
+}
+
+main .container .social .social-card .username {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2rem 0 2rem;
+  width: 30%;
+}
+
+main .container .social .social-card .username span {
+  color: #63687e;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+main .container .social .social-card .stats-today {
+  margin: 1rem 0 2rem;
+  font-size: 12px;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .container .social .social-card .stats-today img {
+  padding-right: 5px;
+}
+
+main .container .social .social-card .stats-today .up-green {
+  color: #1db489;
+}
+
+main .container .social .social-card .stats-today .down-red {
+  color: #dc414c;
+}
+
+main .container .social #facebook {
+  border-top: 4px solid #198ff5;
+}
+
+main .container .social #twitter {
+  border-top: 4px solid #1ca0f2;
+}
+
+main .container .social #instagram {
+  overflow: hidden;
+}
+
+main .container .social #instagram .border-div {
+  width: 100%;
+  height: 4px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#df4996), to(#fdc468));
+  background-image: linear-gradient(90deg, #df4996, #fdc468);
+}
+
+main .container .social #youtube {
+  border-top: 4px solid #c4032a;
+}
+
+main .container .overview-today {
+  width: 90%;
+  margin: 3rem;
+}
+
+main .container .overview-today h3 {
+  color: #63687e;
+  margin: 0 0 2rem 0;
+}
+
+main .container .overview-today h4 {
+  color: #63687e;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+main .container .overview-today p {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+main .container .overview-today .over-view-card {
+  height: 8rem;
+  border-radius: 10px;
+  padding: 1rem;
+  background-color: #f0f2fa;
+  margin: 0 0 1rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  -ms-grid-rows: 50% 50%;
+      grid-template-rows: 50% 50%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .container .overview-today .over-view-card h4 {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+main .container .overview-today .over-view-card p {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 2;
+  grid-row: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+main .container .overview-today .over-view-card .social-image {
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  width: 100%;
+  height: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+main .container .overview-today .over-view-card .social-image img {
+  width: 20px;
+  height: 20px;
+}
+
+main .container .overview-today .over-view-card span {
+  font-size: 12px;
+  font-weight: 700;
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-row: 2;
+  grid-row: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .container .overview-today .over-view-card span img {
+  padding-right: 5px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .container .overview-today .over-view-card .span-green {
+  color: #1db489;
+}
+
+main .container .overview-today .over-view-card .span-red {
+  color: #dc414c;
+}
+
+@media screen and (min-width: 720px) {
+  main .container {
+    position: relative;
+    width: 100%;
+  }
+  main .container .dashboard {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  main .container .dashboard .divider {
+    display: none;
+  }
+  main .container .social {
+    width: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  main .container .social .social-card {
+    width: 22%;
+  }
+  main .container .social .social-card .username {
+    width: 50%;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  main .container .overview-today {
+    width: 90%;
+  }
+  main .container .overview-today .overview-wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto auto auto;
+        grid-template-columns: auto auto auto auto;
+    -ms-grid-rows: auto auto auto;
+        grid-template-rows: auto auto auto;
+    grid-row-gap: 1rem;
+    grid-column-gap: 1rem;
+  }
+}
+
+.toggleDarkMode .container {
+  background-color: #1e202a;
+  -webkit-transition: 325ms ease-in-out;
+  transition: 325ms ease-in-out;
+}
+
+.toggleDarkMode .container .dashboard {
+  background-color: #1f212e;
+  -webkit-transition: 325ms ease-in-out;
+  transition: 325ms ease-in-out;
+}
+
+.toggleDarkMode .container .dashboard .info h3 {
+  color: white;
+}
+
+.toggleDarkMode .container .dashboard .info p {
+  color: #8b97c6;
+}
+
+.toggleDarkMode .container .dashboard .mode p {
+  color: #8b97c6;
+}
+
+.toggleDarkMode .container .dashboard .mode button .circle {
+  background-color: #1f212e;
+  -webkit-transition: 325ms ease-in-out;
+  transition: 325ms ease-in-out;
+}
+
+.toggleDarkMode .container .social .social-card {
+  background-color: #252a41;
+}
+
+.toggleDarkMode .container .social .social-card h1 {
+  color: white;
+}
+
+.toggleDarkMode .container .social .social-card p {
+  color: #8b97c6;
+}
+
+.toggleDarkMode .container .social .social-card span {
+  color: #8b97c6;
+}
+
+.toggleDarkMode .container .overview-today > .overview-wrapper .over-view-card {
+  background-color: #252a41;
+}
+
+.toggleDarkMode .container .overview-today > .overview-wrapper .over-view-card h4 {
+  color: #8b97c6;
+}
+
+.toggleDarkMode .container .overview-today > .overview-wrapper .over-view-card p {
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */
